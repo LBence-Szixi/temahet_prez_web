@@ -6,6 +6,16 @@
 	<title>Szixi Témahét</title>
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="gallery.css">
+
+	<script type="importmap">
+		{
+		  "imports": {
+			"three": "https://unpkg.com/three@latest/build/three.module.js",
+			"three/addons/": "https://unpkg.com/three@latest/examples/jsm/"
+		  }
+		}
+	  </script>
+  
 </head>
 <body>
 	<script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
@@ -40,20 +50,78 @@
 
 			<p>Alább bemutatnánk azon projekteket, amiket az egész osztállyal csináltunk.</p>
 
+			<h3>➗ Matematika</h3>
+			<p>Matematikából diagramokat készítettünk a műanyag felhasználásáról.</p>
+			<p>Ezekből a diagramokból világosan látszik, mennyire áthatotta az életünket a plasztikanyagok használata az elmúlt 100 évben.</p>
+
+			<canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+
+			<script src="chart.js"></script>
+
+			<script>
+				var xValues = ["1950-es évek", "1960-as évek", "1970-es évek", "1980-as évek", "1990-es évek", "2000-es évek", "2010-es évek"];
+			var yValues = [2.6, 12.3, 46, 412, 420,748,848];
+			var barColors = ["red", "purple","dodgerblue","green","yellow", "orange", "red"];
+
+			new Chart("myChart", {
+			type: "bar",
+			data: {
+				labels: xValues,
+				datasets: [{
+				backgroundColor: barColors,
+				data: yValues
+				}]
+			},
+			options: {
+				legend: {display: false},
+				title: {
+				display: true,
+				text: "Gyártott műanyag (megatonnában)"
+				}
+			}
+			});
+			</script>
+
+			<h3>🇬🇧  Angol</h3>
+			<p>Angolból egy angol nyelvű tutorial(oktatóvideó) videót csináltunk arról, hogyan lehet régi műanyag PET palackokból szuper tartókat csinálni.</p>
+			<p>Ez a projekt tökéletes volt mint az újrahasznosításra való figyelem felhívására, mind az angoltudásunk csiszolására.</p>
+			<p>Alább látható ez a videó:</p>
+
+			<div align="center"><iframe width="640" height="360" src="https://www.youtube.com/embed/ec4e0BrIjdg" title="Szixi Témahét - Flower pot/Pencil holder from PET bottles!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+
+			<h3>⛹️ Testnevelés</h3>
+			<p>Testnevelés tantárgyból régi műszálas ruhákból készítettünk kitünő minőségű rongylabdákat.</p>
+			<p>Ezek a rongylabdák, tekintve hogy tökéletesen alkalmasak órai kidobózásokra, remek új életet sadtak ezeknek a régi ruhadaraboknak.</p>
+			<p>Alább látható egy videó egy kidobósmeccsünkről, ahol ezekkel a rongylabdákkal játszottunk:</p>
+
+			<div align="center"><iframe width="640" height="360" src="https://www.youtube.com/embed/yRPIn2D8kbs" title="Szixi témahét: Rendhagyó kidobós újrahasznosított rongylabdával" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+
+			<h3>⚔️ Történelem</h3>
+
+			<h3>⚗️ Komplex természetismeret</h3>
+
+			<h3>🇭🇺 Magyar nyelv és irodalom</h3>
+
+			<p>Magyarból verseket írtunk az újrahasznosításról. Itt egy pár: </p>
+
 			<div class="container">
-				<div class="mySlides" data-type="Matematika">
-					<h3>➗ Matematika</h3>
-					<p>Matematikából diagramokat készítettünk a műanyag felhasználásáról.</p>
-					<p>Ezekből a diagramokból világosan látszik, mennyire áthatotta az életünket a plasztikanyagok használata az elmúlt 100 évben.</p>
+				<div class="mySlides" data-type="Matematika" align="center">
+					<p><b>A műanyagról</b></p>
+					<p>/Volt egy anyag, műanyag//eldobáltuk fű alatt/ <br>
+					/Pazarlás helyett//használjuk mindet/ <br>
+					/Hasznosítsuk újra,//hogy legyen zöld újra/</p>
+
 				</div>
 
-				<div class="mySlides" data-type="Angol">
-					<h3>🇬🇧  Angol</h3>
-					<p>Angolból egy angol nyelvű tutorial(oktatóvideó) videót csináltunk arról, hogyan lehet régi műanyag PET palackokból szuper tartókat csinálni.</p>
-					<p>Ez a projekt tökéletes volt mint az újrahasznosításra való figyelem felhívására, mind az angoltudásunk csiszolására.</p>
-					<p>Alább látható ez a videó:</p>
-
-					<div align="center"><iframe width="640" height="360" src="https://www.youtube.com/embed/ec4e0BrIjdg" title="Szixi Témahét - Flower pot/Pencil holder from PET bottles!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+				<div class="mySlides" data-type="Angol" align="center">
+					<p>Műanyag,te életünk sziniímája, 
+					  Nem tudunk nélküled élni, de hát milyen ára?
+					  Csillogó, könnyű s mégis ártó,
+					  A természetnek adni nem hozható máró.
+					  MInt mérgező szer, lassan elpusztít mindent;
+					  S míg az emberiség bámul, te terjed szerteszét, messze a földön.
+					  Mégis, talán megváltozhat a jövőben sorsa,
+					  Ha kevesebb lesz belőle, mert mindenki az újrahasznosítást választja.</p>
 				</div>
 
 				<div class="mySlides" data-type="Történelem">
@@ -61,12 +129,7 @@
 				</div>
 
 				<div class="mySlides" data-type="Testnevelés">
-					<h3>⛹️ Testnevelés</h3>
-					<p>Testnevelés tantárgyból régi műszálas ruhákból készítettünk kitünő minőségű rongylabdákat.</p>
-					<p>Ezek a rongylabdák, tekintve hogy tökéletesen alkalmasak órai kidobózásokra, remek új életet sadtak ezeknek a régi ruhadaraboknak.</p>
-					<p>Alább látható egy videó egy kidobósmeccsünkről, ahol ezekkel a rongylabdákkal játszottunk:</p>
 
-					<div align="center"><iframe width="640" height="360" src="https://www.youtube.com/embed/yRPIn2D8kbs" title="Szixi témahét: Rendhagyó kidobós újrahasznosított rongylabdával" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
 				</div>
 
 				<div class="mySlides" data-type="Természetismeret">
@@ -77,31 +140,19 @@
 					<h3>🇭🇺 Magyar nyelv és irodalom</h3>
 				</div>
 
-				<div class="mySlides" data-type="Pénzügyek">
-					<h3>💴 Pénzügyi és Vállalkozási ismeretek</h3>
-				</div>
-
-				<div class="mySlides" data-type="Digitális kultúra">
-					<h3>🖥️ Digitális kultúra</h3>
-				</div>
-
-				<div class="mySlides" data-type="Iétal">
-					<h3>👨‍🔧 Informatikai és Távközlési alpaismeretek</h3>
-				</div>
-
-
-				<div class="mySlides" data-type="IKT">
-					<h3>🎞️ IKT Projektmunka</h3>
-				</div>
-
 
 				<a class="prev cursor" onclick="plusSlides(-1)">&#10094;</a>
 				<a class="next cursor" onclick="plusSlides(1)">&#10095;</a>
 
-				<div class="caption-container">
-					<p id="caption"></p>
-				</div>
 			</div>
+
+			<h3>💴 Pénzügyi és Vállalkozási ismeretek</h3>
+
+			<h3>🖥️ Digitális kultúra</h3>
+
+			<h3>👨‍🔧 Informatikai és Távközlési alpaismeretek</h3>
+
+			<h3>🎞️ IKT Projektmunka</h3>
 
 		</section>
   
@@ -135,20 +186,15 @@
 	  </main>
 
 
-    <script type="importmap">
-      {
-        "imports": {
-          "three": "https://unpkg.com/three@latest/build/three.module.js",
-          "three/addons/": "https://unpkg.com/three@latest/examples/jsm/"
-        }
-      }
-    </script>
 
 	<script type="module" src="script.js"></script>
 
 	<script src="hackertext.js"></script>
 
 	<script src="gallery.js"></script>
+
+
+
 
 </body>
 </html>
